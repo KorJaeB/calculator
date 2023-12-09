@@ -63,7 +63,7 @@ body{
 }
 
 .calculator form .dot{
-  background-color: #397836;
+  background-color: #e5f2bd;
 }
 
 .calculator form .result{     /* html에서의 class는 operator result라고 되어 있지만 실질적으로 operator, result라는 두 개의 class를 가지는 것임. 맞나..? 그렇다면 operator 클래스로 사용한 위에서 적용한 것이 같이 적용되어야 하는데? */
