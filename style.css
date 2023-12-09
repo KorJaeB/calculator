@@ -1,0 +1,89 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #1f1f1f;
+
+  /* 
+  중앙 정렬에 사용할 수 있는 방법 1 (body 태그 안에서 사용)
+  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:100vh;
+}
+
+.calculator{
+  width:287px;
+  border:1px solid #333;
+  background-color: #ccc;
+  padding: 5px;
+
+
+  /* 
+  중앙 정렬에 사용할 수 있는 다른 방법(계산기 클래스 내에서 사용)
+  position:absolute;
+  top:50%;
+  left: 50%;
+  transform:translate(-50%,-50%); 
+  */
+
+}
+
+.calculator form{     /* calculator 클래스를 가진 form 요소를 "모두" 선택 */
+  display : grid;
+  grid-template-columns: repeat(4, 65px);
+  grid-auto-rows: 65px;
+  grid-gap : 5px;
+}
+
+#forms{     /* 이는 forms id를 가진 요소"만" 선택  .calculator form과 다름 */
+
+}
+
+.calculator form input{
+  border:2px solid #333;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.calculator form input:hover{     /* hover란 마우스 커서를 올렸을 때를 말함 */
+  box-shadow: 1px 1px 5px #333;
+}
+
+.calculator form .clear{
+  background-color :#d62c27;
+}
+
+.calculator form .operator{
+  background-color: #e38c12;
+}
+
+.calculator form .dot{
+  background-color: #397836;
+}
+
+.calculator form .result{     /* html에서의 class는 operator result라고 되어 있지만 실질적으로 operator, result라는 두 개의 class를 가지는 것임. 맞나..? 그렇다면 operator 클래스로 사용한 위에서 적용한 것이 같이 적용되어야 하는데? */
+  grid-column: span 2;
+}
+
+.calculator form input[type='text']{
+  grid-column: span 4;
+  text-align: right;
+  padding: 0 10px;
+}
+
+.calculator form input[value="C"]{
+  grid-column: span 3;
+}
+
+.hello{
+  color :aliceblue;
+  position:absolute;
+  top:20%;
+  left: 50%;
+  transform:translate(-50%,-50%); 
+}
